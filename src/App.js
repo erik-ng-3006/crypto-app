@@ -1,8 +1,8 @@
 import {
 	Navbar,
-	HomePage,
+	Homepage,
 	Exchanges,
-	CryptoCurrencies,
+	Cryptocurrencies,
 	CryptoDetails,
 	News,
 } from './components';
@@ -20,11 +20,11 @@ function App() {
 				<Layout>
 					<div className='routes'>
 						<Routes>
-							<Route path='/' element={<HomePage />} />
+							<Route path='/' element={<Homepage />} />
 							<Route path='/exchanges' element={<Exchanges />} />
 							<Route
 								path='/cryptocurrencies'
-								element={<CryptoCurrencies />}
+								element={<Cryptocurrencies />}
 							/>
 							<Route
 								path='/crypto/:coinId'
