@@ -79,8 +79,7 @@ function News({ simplified }) {
 									<Avatar
 										src={
 											news?.provider[0]?.image?.thumbnail
-												.contentUrl?.contentUrl ||
-											demoImage
+												?.contentUrl || demoImage
 										}
 										alt='news'
 									/>
