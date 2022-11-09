@@ -5,7 +5,6 @@ import icon from '../images/cryptocurrency.png';
 import {
 	HomeOutlined,
 	FundOutlined,
-	MoneyCollectOutlined,
 	BulbOutlined,
 	MenuOutlined,
 } from '@ant-design/icons';
@@ -43,11 +42,11 @@ function Navbar() {
 			icon: <FundOutlined />,
 			key: 'cryptocurrencies',
 		},
-		{
+		/* {
 			label: <Link to='/exchanges'>Exchanges</Link>,
 			icon: <MoneyCollectOutlined />,
 			key: 'exchanges',
-		},
+		}, */
 
 		{
 			label: <Link to='/news'>News</Link>,
