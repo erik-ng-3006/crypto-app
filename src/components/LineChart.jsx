@@ -28,6 +28,9 @@ function LineChart({ coinHistory, coinName, currentPrice }) {
 	const coinPrices = [];
 	const coinTimestamp = [];
 
+	const isPriceDown = coinHistory?.change.includes('-');
+	console.log(isPriceDown);
+
 	for (let i = 0; i < coinHistory?.history.length; i++) {
 		coinPrices.unshift(coinHistory?.history[i].price);
 		coinTimestamp.unshift(
@@ -70,8 +73,16 @@ function LineChart({ coinHistory, coinName, currentPrice }) {
 					{coinName} Price Chart
 				</Title>
 				<Col className='price-container'>
-					<Title level={5} className='price-change'>
-						{coinHistory?.change}%
+					<Title
+						level={5}
+						className={
+							isPriceDown ? 'price-change down' : 'price-change'
+						}
+					>
+						{!isPriceDown
+							? `+${coinHistory?.change}`
+							: coinHistory?.change}
+						%
 					</Title>
 					<Title level={5} className='current-price'>
 						Current {coinName} Price: $ {currentPrice}
