@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">My K-dramas app</h1>
+<h1 align="center">Cryptoverse</h1>
 
 <div align="center">
   <h3>
