@@ -69,7 +69,7 @@ function News({ simplified }) {
 								/>
 							</div>
 							<p>
-								{news.description.length < 300
+								{news.description.length < 100
 									? news.description
 									: news.description.substring(0, 100) +
 									  ' ...'}
