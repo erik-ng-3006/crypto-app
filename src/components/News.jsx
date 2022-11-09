@@ -4,6 +4,7 @@ import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import moment from 'moment';
 import { useState } from 'react';
+import Loader from './Loader';
 
 const demoImage =
 	'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
@@ -23,7 +24,7 @@ function News({ simplified }) {
 	});
 	const { data: cryptos } = useGetCryptosQuery(100);
 
-	if (!cryptoNews?.value) return 'Loading...';
+	if (!cryptoNews?.value) return <Loader />;
 
 	return (
 		<Row gutter={[24, 24]}>

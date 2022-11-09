@@ -21,6 +21,7 @@ import {
 } from '../services/cryptoApi';
 import { useState } from 'react';
 import LineChart from './LineChart';
+import Loader from './Loader';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -40,7 +41,7 @@ function CryptoDetails() {
 
 	const coinHistory = historyData?.data;
 
-	if (isFetching) return 'Loading...';
+	if (isFetching) return <Loader />;
 
 	const cryptoDetails = data?.data?.coin;
 
